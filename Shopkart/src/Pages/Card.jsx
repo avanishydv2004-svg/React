@@ -1,9 +1,11 @@
 import React from 'react'
 import { CartContext } from './CartContext.jsx'
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Cart() {
   const { state, dispatch } = useContext(CartContext);
+  const navigate = useNavigate();
 
   return (
     <div className="cart-container">
@@ -29,6 +31,9 @@ function Cart() {
             </div>
         ))
       )}
+      <button onClick={()=> navigate("/payment")}>
+        Proceed to Payment
+      </button>
       </div>
 
   );

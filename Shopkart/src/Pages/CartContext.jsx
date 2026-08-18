@@ -19,6 +19,11 @@ function CartReducer  (state, action) {
           (item,index) => index !== action.payload
         ),
       };
+
+      case "CLEAR_CART":
+        return {
+          cart: []
+        };
   }
 };
 

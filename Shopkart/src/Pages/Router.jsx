@@ -6,6 +6,9 @@ import Products from "../Pages/Products.jsx";
 import Layout from "../Common/Layout.jsx"; 
 import Login from "./Login.jsx";
 import Card from "./Card.jsx";
+import OrderSuccess from "./OrderSuccess.jsx";
+import Payment from "./Payment.jsx";
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -22,6 +25,14 @@ const router = createBrowserRouter([
             {
                 path: "card",
                 element: <Card/>
+            },
+            {
+                path: "payment",
+                element: <Payment/>
+            },
+            {
+                path: "success",
+                element: <OrderSuccess/>
             },
             {
                 path: '/Login',
