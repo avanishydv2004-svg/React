@@ -4,6 +4,8 @@ import Home from "../Pages/Home.jsx";
 import App from "../App.jsx";
 import Products from "../Pages/Products.jsx";
 import Layout from "../Common/Layout.jsx"; 
+import Login from "./Login.jsx";
+import Card from "./Card.jsx";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
             {
                 path: '/products',
                 element: <Products/>
+            },
+            {
+                path: "card",
+                element: <Card/>
+            },
+            {
+                path: '/Login',
+                element: <Login/>
             }
         ]
     }

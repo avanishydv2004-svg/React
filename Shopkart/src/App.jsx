@@ -7,17 +7,41 @@ import router from './Pages/Router'
 import { RouterProvider } from 'react-router-dom'
 import Home from './Pages/Home'
 import Products from './Pages/Products'
+import Login from './Pages/Login'
+import { ThemeProvider } from './context/ThemeContext';
+import { CartProvider } from './Pages/CartContext'
 
 function App() {
 
   return (
     <>
-<RouterProvider router={router}/>
-</>
+    <ThemeProvider>
+      <CartProvider>
+      <RouterProvider router={router} />
+      </CartProvider>
+    </ThemeProvider>
+    </>
   )
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
